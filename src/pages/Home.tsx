@@ -15,7 +15,9 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  
 } from '@chakra-ui/react';
+import { Link as RouterLink } from 'react-router-dom';
 
 export default function Home() {
   // We'll convert theme color tokens into real CSS values for our gradient
@@ -75,14 +77,15 @@ export default function Home() {
                 and dApps to help businesses unlock the potential of decentralized technology.
               </Text>
               <HStack spacing={4}>
+                {/* Corrected Button that routes to /products */}
                 <Button
-                  as="a"
-                  href="https://nlgarts.com/products"
+                  as={RouterLink}
+                  to="/products"
                   size="lg"
                   colorScheme="accent"
                   variant="outline"
                 >
-                  check products
+                  Check Products
                 </Button>
               </HStack>
             </VStack>
@@ -253,10 +256,7 @@ export default function Home() {
                   Contact Us
                 </MenuButton>
                 <MenuList>
-                  <MenuItem
-                    as="a"
-                    href="mailto:nlgsakib@gmail.com"
-                  >
+                  <MenuItem as="a" href="mailto:nlgsakib@gmail.com">
                     Contact via Email
                   </MenuItem>
                   <MenuItem
