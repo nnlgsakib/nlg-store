@@ -11,6 +11,10 @@ import {
   Stack,
   useColorModeValue,
   useToken,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react';
 
 export default function Home() {
@@ -23,7 +27,7 @@ export default function Home() {
 
   // Dynamically create our gradient based on light or dark mode
   const heroBg = useColorModeValue(
-    `linear-gradient(to right, ${brand400}, ${brand500})`, 
+    `linear-gradient(to right, ${brand400}, ${brand500})`,
     `linear-gradient(to right, ${brand500}, ${brand600})`
   );
 
@@ -64,7 +68,6 @@ export default function Home() {
               <Text
                 fontSize="xl"
                 maxW="lg"
-                // Use brand tokens for text color in light/dark mode
                 color={useColorModeValue('brand.50', 'brand.100')}
                 textShadow="0 1px 2px rgba(0,0,0,0.3)"
               >
@@ -242,13 +245,30 @@ export default function Home() {
               Let’s work together to bring your ideas to life. Contact us to discuss 
               your requirements or explore our store for ready-made solutions.
             </Text>
+            
+            {/* UPDATED CONTACT MENU */}
             <HStack spacing={4}>
-              <Button 
-                size="lg" 
-                colorScheme="brand"
-              >
-                Contact Us
-              </Button>
+              <Menu>
+                <MenuButton as={Button} size="lg" colorScheme="brand">
+                  Contact Us
+                </MenuButton>
+                <MenuList>
+                  <MenuItem
+                    as="a"
+                    href="mailto:nlgsakib@gmail.com"
+                  >
+                    Contact via Email
+                  </MenuItem>
+                  <MenuItem
+                    as="a"
+                    href="https://t.me/NLG_verse"
+                    target="_blank"
+                  >
+                    Contact via Telegram
+                  </MenuItem>
+                </MenuList>
+              </Menu>
+
               <Button
                 as="a"
                 href="/products"
