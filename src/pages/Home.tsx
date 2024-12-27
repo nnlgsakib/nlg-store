@@ -77,12 +77,12 @@ export default function Home() {
               <HStack spacing={4}>
                 <Button
                   as="a"
-                  href="/products"
+                  href="https://www.nlgarts.com/products"
                   size="lg"
                   colorScheme="accent"
                   variant="outline"
                 >
-                  Store
+                  check products
                 </Button>
               </HStack>
             </VStack>
