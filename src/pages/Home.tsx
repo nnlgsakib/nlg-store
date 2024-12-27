@@ -77,7 +77,7 @@ export default function Home() {
               <HStack spacing={4}>
                 <Button
                   as="a"
-                  href="https://www.nlgarts.com/products"
+                  href="https://nlgarts.com/products"
                   size="lg"
                   colorScheme="accent"
                   variant="outline"
